@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dasar</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind opsional karena kali ini kita tidak fokus ke styling -->
+</head>
+
+<body>
+    <h1>Belajar JavaScript Dasar</h1>
+    <div id="result"></div>
+
+    <!-- Tambahkan ini di dalam <body> index.html -->
+    <hr style="margin: 20px 0;">
+    <h2>Bagian Interaktif (Langkah 5 - 8)</h2>
+
+    <!-- Elemen untuk Langkah 5: Fungsi & Event -->
+    <div>
+        <input type="text" id="nama-input" placeholder="Masukkan nama Anda" />
+        <button id="sapa-button">Sapa Saya!</button>
+        <div id="sapa-output"></div>
+    </div>
+
+    <hr style="margin: 20px 0;">
+
+    <!-- Elemen untuk Langkah 7: DOM Dinamis -->
+    <div>
+        <button id="btn-tambah-item">Tambah Item To-Do</button>
+        <button id="btn-hapus-item">Hapus Item Terakhir</button>
+        <div id="dom-output" style="margin-top: 10px;"></div>
+    </div>
+
+    <hr style="margin: 20px 0;">
+
+    <!-- Elemen untuk Langkah 8: Fetch API -->
+    <div>
+        <button id="btn-fetch">Ambil Data dari Internet (API)</button>
+        <div id="api-output" style="margin-top: 10px;"></div>
+    </div>
+
+    <!-- Menghubungkan dengan file JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

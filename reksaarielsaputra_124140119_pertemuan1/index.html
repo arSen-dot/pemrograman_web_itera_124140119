@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini POS | Kasir Kantin Kampus</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Praktikum PAW · Tugas 1</p>
+          <h1>Mini POS Kantin Kampus</h1>
+          <p class="subtitle">
+            Aplikasi kasir sederhana untuk input barang, keranjang belanja, diskon, dan perhitungan kembalian.
+          </p>
+        </div>
+        <div class="hero-badge">
+          <span>Kasir Aktif</span>
+          <strong id="itemCount">0 item</strong>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="card">
+          <h2>1. Input Barang</h2>
+          <p class="section-note">Isi data barang, lalu tambahkan ke keranjang belanja.</p>
+
+          <form id="itemForm" novalidate>
+            <div class="field">
+              <label for="itemName">Nama Barang</label>
+              <input
+                type="text"
+                id="itemName"
+                name="itemName"
+                placeholder="Contoh: Buku Tulis"
+                autocomplete="off"
+              />
+              <p class="error" id="itemNameError"></p>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="itemPrice">Harga Satuan (Rp)</label>
+                <input
+                  type="number"
+                  id="itemPrice"
+                  name="itemPrice"
+                  placeholder="Minimal 500"
+                  min="500"
+                  step="1"
+                />
+                <p class="error" id="itemPriceError"></p>
+              </div>
+
+              <div class="field">
+                <label for="itemQty">Jumlah / Qty</label>
+                <input
+                  type="number"
+                  id="itemQty"
+                  name="itemQty"
+                  placeholder="Minimal 1"
+                  min="1"
+                  step="1"
+                />
+                <p class="error" id="itemQtyError"></p>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Tambah ke Keranjang</button>
+          </form>
+        </section>
+
+        <section class="card">
+          <div class="section-head">
+            <div>
+              <h2>2. Keranjang Belanja</h2>
+              <p class="section-note">Data keranjang tersimpan otomatis di localStorage.</p>
+            </div>
+            <button type="button" id="resetBtn" class="btn btn-ghost">Transaksi Baru</button>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nama Barang</th>
+                  <th>Harga Satuan</th>
+                  <th>Qty</th>
+                  <th>Subtotal</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="cartBody">
+                <tr class="empty-row">
+                  <td colspan="6">Keranjang masih kosong. Tambahkan barang terlebih dahulu.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card summary-card">
+          <h2>3. Ringkasan & Pembayaran</h2>
+
+          <div class="promo-box">
+            <label for="promoCode">Kode Promo</label>
+            <div class="promo-row">
+              <input
+                type="text"
+                id="promoCode"
+                placeholder="Contoh: HEMAT10"
+                autocomplete="off"
+              />
+              <button type="button" id="applyPromoBtn" class="btn btn-secondary">Terapkan</button>
+            </div>
+            <p id="discountNote" class="hint">Belanja Rp 50.000 atau lebih untuk mendapatkan diskon 10%.</p>
+            <p class="promo-status" id="promoStatus"></p>
+          </div>
+
+          <dl class="summary">
+            <div>
+              <dt>Total Belanja</dt>
+              <dd id="totalBelanja">Rp 0</dd>
+            </div>
+            <div>
+              <dt>Diskon</dt>
+              <dd id="diskon">Rp 0</dd>
+            </div>
+            <div class="grand">
+              <dt>Total Akhir</dt>
+              <dd id="totalAkhir">Rp 0</dd>
+            </div>
+          </dl>
+
+          <div class="field">
+            <label for="uangBayar">Uang Bayar (Rp)</label>
+            <input
+              type="number"
+              id="uangBayar"
+              placeholder="Masukkan uang yang diterima"
+              min="0"
+              step="1"
+            />
+          </div>
+
+          <div class="change-box" id="changeBox">
+            <span>Kembalian</span>
+            <strong id="kembalian">Rp 0</strong>
+            <p id="paymentNote">Masukkan uang bayar untuk menghitung kembalian.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
