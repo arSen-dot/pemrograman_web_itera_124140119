@@ -6,12 +6,12 @@
 
 Personal Dashboard adalah aplikasi web asisten harian mahasiswa dalam satu tempat, dengan tampilan terinspirasi **Personal Management System** (sidebar navigasi, topbar dengan pencarian, kartu widget, dan badge status):
 
-- **📊 Dashboard** — overview widget: progres tugas (progress bar), jadwal hari ini, tugas aktif, catatan terbaru, dan kutipan harian.
-- **📅 Jadwal Kuliah** — tambah, ubah, dan hapus jadwal (hari, mata kuliah, jam, ruangan). Otomatis diurutkan per hari.
-- **✅ Daftar Tugas** — tambah, ubah, hapus, dan tandai selesai. Dilengkapi deadline, badge prioritas (Tinggi/Sedang/Rendah), badge status DONE/PENDING ala PMS, dan filter (Semua / Belum selesai / Selesai).
-- **📝 Catatan** — tambah, ubah, dan hapus catatan bebas dengan stempel waktu otomatis.
-- **🔍 Pencarian topbar** — filter daftar yang sedang dibuka secara real-time.
-- **🔔 Lonceng** — badge jumlah tugas aktif, klik untuk lompat ke daftar tugas.
+- **Dashboard** — overview widget: progres tugas (progress bar), jadwal hari ini, tugas aktif, catatan terbaru, dan kutipan harian.
+- **Jadwal Kuliah** — tambah, ubah, dan hapus jadwal (hari, mata kuliah, jam, ruangan). Otomatis diurutkan per hari.
+- **Daftar Tugas** — tambah, ubah, hapus, dan tandai selesai. Dilengkapi deadline, badge prioritas (Tinggi/Sedang/Rendah), badge status DONE/PENDING ala PMS, dan filter (Semua / Belum selesai / Selesai).
+- **Catatan** — tambah, ubah, dan hapus catatan bebas dengan stempel waktu otomatis.
+- **Pencarian topbar** — filter daftar yang sedang dibuka secara real-time.
+- **Lonceng** — badge jumlah tugas aktif, klik untuk lompat ke daftar tugas.
 - **Widget cuaca real-time** kampus ITERA di topbar (Open-Meteo, async/await).
 - **Penyimpanan lokal** — seluruh data jadwal, tugas, dan catatan tersimpan di `localStorage` browser (`paw_dashboard_v1`) dan bertahan setelah refresh. Saat pertama dibuka, daftar tugas di-seed dari JSONPlaceholder.
 
