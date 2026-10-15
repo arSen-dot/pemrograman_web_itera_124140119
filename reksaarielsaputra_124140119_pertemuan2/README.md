@@ -54,7 +54,3 @@ tugas-paw-pertemuan-2/
 ├── screenshots/        # screenshot antarmuka
 └── README.md
 ```
-
-## Catatan
-
-Data contoh (3 jadwal + 1 catatan) adalah seed awal dan bisa dihapus/diubah langsung dari aplikasi. Tugas awal di-seed otomatis dari JSONPlaceholder hanya saat `localStorage` masih kosong.
