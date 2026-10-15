@@ -14,15 +14,7 @@ Personal Dashboard adalah aplikasi web asisten harian mahasiswa dalam satu tempa
 - **Lonceng** — badge jumlah tugas aktif, klik untuk lompat ke daftar tugas.
 - **Widget cuaca real-time** kampus ITERA di topbar (Open-Meteo, async/await).
 - **Penyimpanan lokal** — seluruh data jadwal, tugas, dan catatan tersimpan di `localStorage` browser (`paw_dashboard_v1`) dan bertahan setelah refresh. Saat pertama dibuka, daftar tugas di-seed dari JSONPlaceholder.
-
-## Cara Menjalankan
-
-> Jangan buka `index.html` dengan double-click (protokol `file://`) — modul ES (`type="module"`) akan diblokir browser karena CORS.
-
-1. Buka folder project di VS Code.
-2. Klik kanan `index.html` → **Open with Live Server**.
-3. Atau serve manual: `python3 -m http.server 8000` lalu buka `http://localhost:8000`.
-
+  
 ## Screenshot
 
 ![Dashboard](screenshots/01-dashboard.png)
