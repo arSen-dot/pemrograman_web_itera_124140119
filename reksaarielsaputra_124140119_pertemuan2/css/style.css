@@ -1,0 +1,292 @@
+/* Personal Dashboard — tema ala Personal Management System (volmarg) */
+
+:root {
+  --blue: #2f7bff;
+  --blue-dark: #1f5fd6;
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --border: #e6eaf3;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --green: #22c55e;
+  --red: #ef4444;
+  --amber: #f59e0b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.layout { display: flex; min-height: 100vh; }
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  width: 228px;
+  flex-shrink: 0;
+  background: #fff;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1.1rem 1.2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand-logo {
+  width: 42px; height: 42px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  border: 2px solid var(--blue);
+  border-radius: 12px;
+  color: var(--blue);
+}
+
+.brand-text { font-weight: 800; line-height: 1.15; font-size: 0.95rem; }
+.brand-text span { color: var(--blue); }
+
+.nav { padding: 0.8rem 0.7rem; flex: 1; overflow-y: auto; }
+.nav-label { font-size: 0.68rem; letter-spacing: 0.08em; color: var(--muted); padding: 0 0.6rem 0.4rem; }
+
+.navbtn {
+  display: flex; align-items: center; gap: 0.7rem;
+  width: 100%;
+  padding: 0.62rem 0.8rem;
+  margin-bottom: 2px;
+  border: none; background: transparent;
+  border-radius: 8px;
+  font-size: 0.9rem; font-weight: 500; color: var(--text);
+  cursor: pointer; text-align: left;
+  transition: background 0.12s ease;
+}
+.navbtn:hover { background: #eef3ff; }
+.navbtn.active { background: #e3edff; color: var(--blue-dark); font-weight: 700; }
+.nav-ico { width: 22px; text-align: center; }
+
+.side-foot {
+  padding: 1rem 1.2rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.78rem; font-weight: 600;
+}
+.side-foot .dim { color: var(--muted); font-weight: 400; margin: 2px 0 0; }
+
+/* ---------- Main & topbar ---------- */
+.main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+
+.topbar {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 0.7rem 1.4rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  position: sticky; top: 0; z-index: 20;
+}
+
+.search {
+  width: 320px; max-width: 40vw;
+  background: #f1f4fa;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.88rem;
+}
+.search:focus { outline: none; border-color: var(--blue); background: #fff; }
+
+.top-right { display: flex; align-items: center; gap: 1rem; }
+
+.iconbtn {
+  position: relative;
+  background: none; border: none; font-size: 1.25rem; cursor: pointer;
+  padding: 0.25rem;
+}
+.badge-count {
+  position: absolute; top: -4px; right: -6px;
+  background: var(--blue); color: #fff;
+  font-size: 0.62rem; font-weight: 700;
+  min-width: 17px; height: 17px; line-height: 17px;
+  border-radius: 999px; text-align: center; padding: 0 4px;
+}
+.badge-count.hidden { display: none; }
+
+.clock { font-weight: 600; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+
+.weather-chip {
+  background: #eef3ff; color: var(--blue-dark);
+  font-size: 0.82rem; font-weight: 600;
+  padding: 0.35rem 0.8rem; border-radius: 999px;
+  white-space: nowrap;
+}
+
+.user { display: flex; align-items: center; gap: 0.55rem; }
+.avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue), #7c3aed);
+  color: #fff; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.username { font-weight: 600; font-size: 0.9rem; }
+
+/* ikon SVG 2D monokrom */
+.ico {
+  width: 1.05em;
+  height: 1.05em;
+  vertical-align: -0.16em;
+  flex-shrink: 0;
+}
+.nav-ico .ico { width: 19px; height: 19px; vertical-align: 0; }
+.brand-logo .ico { width: 24px; height: 24px; }
+.iconbtn .ico { width: 22px; height: 22px; }
+.weather-chip .ico { width: 1em; height: 1em; }
+.btn-ghost .ico, .btn-danger .ico { width: 0.95em; height: 0.95em; }
+
+/* ---------- Content & widgets ---------- */
+.content { padding: 1.4rem; max-width: 1200px; width: 100%; margin: 0 auto; }
+.view.hidden { display: none; }
+
+.page-title { font-size: 1.35rem; font-weight: 800; margin: 0 0 1rem; }
+
+.view-head {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 0.8rem; margin-bottom: 1rem; flex-wrap: wrap;
+}
+.view-head .page-title { margin: 0; }
+
+.widgets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.widget {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.1rem 1.2rem;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+.widget > h3 {
+  text-align: center;
+  font-size: 1.02rem; font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+.stack { display: flex; flex-direction: column; gap: 0.7rem; }
+.cards2 { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.8rem; }
+
+/* kartu list generik (dipakai render JS) */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.9rem 1.05rem;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+.wrow {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 0.6rem; padding: 0.45rem 0;
+  border-bottom: 1px solid #f1f4fa;
+  font-size: 0.9rem;
+}
+.wrow:last-child { border-bottom: none; }
+
+/* progress bar ala PMS */
+.pbar { height: 10px; background: #e9edf5; border-radius: 999px; overflow: hidden; margin-top: 4px; }
+.pbar > div { height: 100%; background: var(--blue); border-radius: 999px; transition: width 0.3s ease; }
+.pbar-label { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--muted); }
+
+/* badge status ala PMS */
+.badge {
+  display: inline-block;
+  font-size: 0.7rem; font-weight: 700;
+  padding: 0.18rem 0.6rem;
+  border-radius: 6px;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+.badge-done, .badge-rendah { background: #dcfce7; color: #15803d; }
+.badge-pending, .badge-todo { background: #dbeafe; color: #1d4ed8; }
+.badge-tinggi { background: #fee2e2; color: #b91c1c; }
+.badge-sedang { background: #fef3c7; color: #b45309; }
+.badge-day { background: #1f2937; color: #fff; }
+
+/* tombol */
+.btn-primary {
+  background: var(--blue); color: #fff;
+  border: none; border-radius: 8px;
+  font-weight: 600; font-size: 0.86rem;
+  padding: 0.55rem 1.05rem;
+  cursor: pointer; transition: background 0.12s ease;
+  white-space: nowrap;
+}
+.btn-primary:hover { background: var(--blue-dark); }
+
+.btn-danger {
+  background: #fee2e2; color: #b91c1c;
+  border: none; border-radius: 7px;
+  font-size: 0.78rem; font-weight: 600;
+  padding: 0.35rem 0.65rem; cursor: pointer;
+}
+.btn-danger:hover { background: #fecaca; }
+
+.btn-ghost {
+  background: #f1f4fa; color: var(--text);
+  border: none; border-radius: 7px;
+  font-size: 0.78rem; font-weight: 600;
+  padding: 0.35rem 0.65rem; cursor: pointer;
+}
+.btn-ghost:hover { background: #e2e8f5; }
+
+/* form */
+.input {
+  width: 100%;
+  border: 1px solid #cbd5e1; border-radius: 8px;
+  padding: 0.55rem 0.75rem; font-size: 0.9rem; background: #fff;
+}
+.input:focus { outline: 2px solid #bfdbfe; border-color: var(--blue); }
+select.input { width: auto; }
+
+/* modal */
+.modal {
+  position: fixed; inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 50; padding: 1rem;
+}
+.modal.hidden { display: none; }
+.modal-box {
+  background: #fff; border-radius: 12px;
+  padding: 1.5rem; width: 100%; max-width: 26rem;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);
+}
+
+.empty {
+  text-align: center; color: var(--muted);
+  padding: 2.2rem 1rem;
+  border: 2px dashed var(--border); border-radius: 10px;
+  background: #fff; font-size: 0.9rem;
+}
+
+.quote-box { font-style: italic; color: var(--muted); font-size: 0.92rem; text-align: center; }
+
+/* responsif: sidebar jadi topbar */
+@media (max-width: 760px) {
+  .layout { flex-direction: column; }
+  .sidebar { width: 100%; height: auto; position: static; }
+  .nav { display: flex; gap: 4px; overflow-x: auto; padding: 0.6rem; }
+  .nav-label, .side-foot, .brand-text { display: none; }
+  .navbtn { white-space: nowrap; }
+  .search { max-width: 46vw; }
+  .username, .weather-chip { display: none; }
+}
