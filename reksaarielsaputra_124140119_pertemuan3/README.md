@@ -18,6 +18,10 @@ sedang dibaca, atau ingin dibeli. Data tersimpan persisten di
 - **Validasi form** — judul dan penulis wajib diisi; field kosong menampilkan
   pesan error dan garis merah (feedback visual).
 
+## Tampilan Dalam Web
+screenshot-home.png
+screenshot-stats.png
+
 ## Cara Instalasi & Menjalankan
 
 ```bash
