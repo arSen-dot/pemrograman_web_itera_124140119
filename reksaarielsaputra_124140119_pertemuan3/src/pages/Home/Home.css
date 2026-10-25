@@ -1,0 +1,6 @@
+/* Halaman Home. */
+.result-count {
+  color: var(--muted);
+  font-size: 13.5px;
+  margin: 0 0 10px;
+}

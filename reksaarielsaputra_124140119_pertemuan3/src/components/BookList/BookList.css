@@ -1,0 +1,50 @@
+/* Daftar kartu buku. */
+.book-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.book-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: #fff;
+}
+
+.book-info { flex: 1; min-width: 0; }
+
+.book-title {
+  display: block;
+  font-size: 15.5px;
+}
+
+.book-author {
+  display: block;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.badge.status-milik { color: var(--accent); border-color: var(--accent); }
+.badge.status-baca { color: #8a6d1f; border-color: #d9c48a; }
+.badge.status-beli { color: #3a5a8c; border-color: #9db4d4; }
+
+.book-actions {
+  display: flex;
+  gap: 8px;
+}

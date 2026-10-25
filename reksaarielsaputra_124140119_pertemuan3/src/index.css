@@ -1,0 +1,24 @@
+/* Gaya dasar aplikasi BukuKu: rapi, tenang, tanpa gimmick. */
+:root {
+  --bg: #f4f2ec;
+  --surface: #ffffff;
+  --ink: #23211c;
+  --muted: #7a7568;
+  --line: #e3ded2;
+  --accent: #2e5d46;
+  --accent-dark: #234739;
+  --danger: #a83a32;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+button { font: inherit; }
+input, select { font: inherit; }

@@ -1,0 +1,15 @@
+/// <reference types="vitest" />
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  // Konfigurasi Vitest: pakai jsdom agar bisa menguji komponen React
+  // seolah-olah berjalan di browser.
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: './src/test/setup.js',
+  },
+})
