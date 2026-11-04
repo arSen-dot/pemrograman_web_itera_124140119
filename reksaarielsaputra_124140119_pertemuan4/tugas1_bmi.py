@@ -1,0 +1,22 @@
+"""Program Penghitung BMI (Body Mass Index) Sederhana.
+
+Menghitung BMI dari berat badan (kg) dan tinggi badan (m), lalu
+menentukan kategori dengan struktur percabangan if-elif-else.
+"""
+
+berat = float(input("Masukkan berat badan (kg): "))
+tinggi = float(input("Masukkan tinggi badan (m): "))
+
+bmi = berat / (tinggi * tinggi)
+
+if bmi < 18.5:
+    kategori = "Berat badan kurang"
+elif bmi < 25:
+    kategori = "Berat badan normal"
+elif bmi < 30:
+    kategori = "Berat badan berlebih"
+else:
+    kategori = "Obesitas"
+
+print(f"\nNilai BMI Anda: {bmi:.2f}")
+print(f"Kategori: {kategori}")
