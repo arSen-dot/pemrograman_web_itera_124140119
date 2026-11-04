@@ -39,8 +39,8 @@ Di Windows, kalau `python` tidak dikenali, pakai `py` atau `python3`.
 ## Screenshot Hasil Eksekusi
 
 - Soal 1:
-![Hasil eksekusi Soal 1](image\bmi.png)
+![Hasil eksekusi Soal 1](/pemrograman_web_itera_124140119/reksaarielsaputra_124140119_pertemuan4/image/bmi.png)
 - Soal 2:
-![Hasil eksekusi Soal 2](image\tugas2.png)
+![Hasil eksekusi Soal 2](/pemrograman_web_itera_124140119/reksaarielsaputra_124140119_pertemuan4/image/tugas2.png)
 - Soal 3:
-![Hasil eksekusi Soal 3](image\main.png)
+![Hasil eksekusi Soal 3](/pemrograman_web_itera_124140119/reksaarielsaputra_124140119_pertemuan4/image/main.png)
