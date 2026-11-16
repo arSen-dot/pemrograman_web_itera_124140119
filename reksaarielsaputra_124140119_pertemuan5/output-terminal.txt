@@ -1,0 +1,43 @@
+=== Menambahkan item ===
+OK   B001 - Laskar Pelangi
+OK   B002 - Bumi
+OK   B003 - Filosofi Teras
+OK   M001 - National Geographic Indonesia
+OK   M002 - Tempo
+=== Uji ID duplikat ===
+GAGAL B001 - Judul Lain (ID sudah ada)
+
+=== Katalog Perpustakaan ITERA (5 item) ===
+1. [Buku] Laskar Pelangi | Penulis: Andrea Hirata | Tahun: 2005 | 529 hlm | Status: Tersedia
+2. [Buku] Bumi | Penulis: Tere Liye | Tahun: 2014 | 440 hlm | Status: Tersedia
+3. [Buku] Filosofi Teras | Penulis: Henry Manampiring | Tahun: 2018 | 346 hlm | Status: Tersedia
+4. [Majalah] National Geographic Indonesia | Edisi: 45 | Terbit: November 2026 | Status: Tersedia
+5. [Majalah] Tempo | Edisi: 12 | Terbit: November 2026 | Status: Tersedia
+
+--- Hasil pencarian "Laskar" (1 ditemukan) ---
+- [Buku] Laskar Pelangi | Penulis: Andrea Hirata | Tahun: 2005 | 529 hlm | Status: Tersedia
+
+--- Hasil pencarian "M002" (1 ditemukan) ---
+- [Majalah] Tempo | Edisi: 12 | Terbit: November 2026 | Status: Tersedia
+
+--- Hasil pencarian "tidak ada" (0 ditemukan) ---
+Tidak ada item yang cocok.
+
+=== Demo status ketersediaan ===
+Pinjam B002: berhasil
+Pinjam B002 lagi: gagal (sudah dipinjam)
+
+=== Katalog Perpustakaan ITERA (5 item) ===
+1. [Buku] Laskar Pelangi | Penulis: Andrea Hirata | Tahun: 2005 | 529 hlm | Status: Tersedia
+2. [Buku] Bumi | Penulis: Tere Liye | Tahun: 2014 | 440 hlm | Status: Dipinjam
+3. [Buku] Filosofi Teras | Penulis: Henry Manampiring | Tahun: 2018 | 346 hlm | Status: Tersedia
+4. [Majalah] National Geographic Indonesia | Edisi: 45 | Terbit: November 2026 | Status: Tersedia
+5. [Majalah] Tempo | Edisi: 12 | Terbit: November 2026 | Status: Tersedia
+Kembalikan B002: berhasil
+
+=== Demo polymorphism: hitung_denda (terlambat 3 hari) ===
+- Laskar Pelangi: Rp3,000
+- Bumi: Rp3,000
+- Filosofi Teras: Rp3,000
+- National Geographic Indonesia: Rp1,500
+- Tempo: Rp1,500
