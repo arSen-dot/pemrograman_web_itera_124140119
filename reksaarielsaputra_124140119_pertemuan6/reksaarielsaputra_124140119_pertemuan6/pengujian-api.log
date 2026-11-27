@@ -1,0 +1,43 @@
+===== 1. GET /api/matakuliah (list) =====
+[{"id": 1, "kode_mk": "IF2110", "nama_mk": "Pemrograman Web", "sks": 3, "semester": 5}, {"id": 2, "kode_mk": "IF3140", "nama_mk": "Basis Data", "sks": 4, "semester": 3}, {"id": 3, "kode_mk": "IF3152", "nama_mk": "Sistem Informasi", "sks": 3, "semester": 5}]
+HTTP 200
+
+===== 2. GET /api/matakuliah/1 (detail) =====
+{"id": 1, "kode_mk": "IF2110", "nama_mk": "Pemrograman Web", "sks": 3, "semester": 5}
+HTTP 200
+
+===== 3. GET /api/matakuliah/99 (tidak ada -> 404) =====
+{"error": "Matakuliah tidak ditemukan."}
+HTTP 404
+
+===== 4. POST /api/matakuliah (tambah IF2140) =====
+{"id": 4, "kode_mk": "IF2140", "nama_mk": "Kecerdasan Buatan", "sks": 3, "semester": 5}
+HTTP 201
+
+===== 5. POST /api/matakuliah (field tak lengkap -> 400) =====
+{"error": "Field sks wajib diisi."}
+HTTP 400
+
+===== 6. POST /api/matakuliah (sks 0 -> 400) =====
+{"error": "Field sks harus lebih dari 0."}
+HTTP 400
+
+===== 7. PUT /api/matakuliah/4 (ubah IF2140) =====
+{"id": 4, "kode_mk": "IF2140", "nama_mk": "Kecerdasan Buatan", "sks": 4, "semester": 6}
+HTTP 200
+
+===== 8. PUT /api/matakuliah/99 (tidak ada -> 404) =====
+{"error": "Matakuliah tidak ditemukan."}
+HTTP 404
+
+===== 9. DELETE /api/matakuliah/4 =====
+{"message": "Matakuliah IF2140 berhasil dihapus."}
+HTTP 200
+
+===== 10. DELETE /api/matakuliah/4 lagi (sudah terhapus -> 404) =====
+{"error": "Matakuliah tidak ditemukan."}
+HTTP 404
+
+===== 11. GET /api/matakuliah (list akhir, kembali 3 data) =====
+[{"id": 1, "kode_mk": "IF2110", "nama_mk": "Pemrograman Web", "sks": 3, "semester": 5}, {"id": 2, "kode_mk": "IF3140", "nama_mk": "Basis Data", "sks": 4, "semester": 3}, {"id": 3, "kode_mk": "IF3152", "nama_mk": "Sistem Informasi", "sks": 3, "semester": 5}]
+HTTP 200
